@@ -1,5 +1,4 @@
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require("./config.json");
 const { getBetween } = require('@remibutler/easyrandom');
 
 const client = new Client({
@@ -38,4 +37,4 @@ client.on(Events.GuildMemberAdd, member => {
     channel.send(`Welcome to Norfeesturn University ${member}! Now fork over my $80k`);
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
